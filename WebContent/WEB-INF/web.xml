@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>jsp_72</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+  <servlet-name>CheckLoginServlet</servlet-name>
+  <servlet-class>com.zxy.controller.CheckLoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>CheckLoginServlet</servlet-name>
+  <url-pattern>/checkLoginServlet</url-pattern>
+  </servlet-mapping>
+<!--  <filter>
+ <filter-name>myFilter</filter-name>
+ <filter-class>com.zxy.filter.MyFilter</filter-class>
+ </filter>
+ <filter-mapping>
+  拦截所有请求
+ xxx.action 拦截以.action的请求
+ index.jsp拦截具体某个jsp页面
+ /user/** 拦截user文件夹底下的所有资源
+ 
+ <filter-name>myFilter</filter-name>
+ <url-pattern>/*</url-pattern>
+ </filter-mapping>  -->
+ <filter>
+ <filter-name>Encoding</filter-name>
+ <filter-class>com.zxy.filter.EncodingFilter</filter-class>
+ </filter>
+ <filter-mapping>
+ <filter-name>Encoding</filter-name>
+ <url-pattern>/*</url-pattern>
+ </filter-mapping>
+ <filter>
+ <filter-name>CheckLoginFilter</filter-name>
+ <filter-class>com.zxy.filter.CheckLoginFilter</filter-class>
+ </filter>
+ <filter-mapping>
+ <filter-name>CheckLoginFilter</filter-name>
+ <url-pattern>/addItems.jsp</url-pattern>
+ <url-pattern>/showOrder.jsp</url-pattern>
+ </filter-mapping>
+</web-app>
