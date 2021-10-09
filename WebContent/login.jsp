@@ -29,6 +29,9 @@ text-align:center;
 <td class=".le"><input type="password" name = "pwd" /></td>
 </tr>
 <tr>
+<td>确认密码</td>
+<td class=".le"><input type="password" name = "repwd" /></td>
+<tr>
 <td colspan="2"><input type = "submit" name="btn1"  value="登录"  /></td>
 </tr>
 </table>
