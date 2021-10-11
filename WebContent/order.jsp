@@ -46,10 +46,10 @@ width:150px;
 <td>总价</td>
 <td ><input type="text" name = "price" /></td>
 </tr>
-<tr>
+<!-- <tr>
 <td>时间</td>
 <td ><input type="text" name = "time" readonly="readonly"/></td>
-</tr>
+</tr> -->
 <tr align="center">
 <td colspan="2"><input type = "submit" name="btn1"  value="登录"  /></td>
 </tr>
